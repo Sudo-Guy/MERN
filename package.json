@@ -8,7 +8,8 @@
     "start-ui": "webpack serve --port 3000",
     "start-bk": "nodemon ./server/index.ts",
     "start": "concurrently -n \"REACT,NODE\" \"npm run start-ui\" \"npm run start-bk\"",
-    "build": "set NODE_ENV=production && webpack"
+    "build": "set NODE_ENV=production && webpack",
+    "google-api-auth": "ts-node ./client/google-api-auth.ts"
   },
   "repository": {
     "type": "git",
@@ -43,8 +44,12 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
+    "@types/node": "^18.11.17",
+    "@types/yargs": "^17.0.17",
     "express": "^4.18.2",
+    "googleapis": "^110.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "yargs": "^17.6.2"
   }
 }
